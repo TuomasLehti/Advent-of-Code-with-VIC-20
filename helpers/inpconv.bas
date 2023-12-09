@@ -1,0 +1,27 @@
+1 REM----------------
+2 REM-INPUT CONVERTER
+3 REM----------------
+4 REM-VERSION 0.3
+5 REM----------------
+6 REM-BY T.LEHTI 2023
+7 REM----------------
+10 FI$="DAY02TEST PC
+20 FO$="DAY02TEST VIC
+100 REM--------------
+101 REM-OPEN FILES
+102 REM--------------
+110 OPEN5,8,5,FI$+",S":OPEN6,8,6,FO$+",S,W"
+115 B=0
+120 REM--------------
+121 REM-MAIN LOOP
+122 REM--------------
+130 GET#5,I$
+135 S=ST
+140 IFI$=CHR$(13)THEN170
+160 PRINT#6,I$;
+165 B=B+1:PRINT"<<CLEAR>>";B;"BYTES CONVERTED"
+170 IFS=0THEN130
+180 REM--------------
+181 REM-CLOSE FILES
+182 REM--------------
+190 CLOSE6,5:END
